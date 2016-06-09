@@ -25,9 +25,13 @@ setup(
     version=get_version_from_init(),
     url='https://github.com/lukaville/pushka-base-parser',
     packages=[
-        'pushka_base_parser'
+        'pushka_base_parser',
+        'pushka_base_parser.store'
     ],
-    package_dir={'pushka_base_parser': 'pushka_base_parser'},
+    package_dir={
+        'pushka_base_parser': 'pushka_base_parser',
+        'pushka_base_parser.store': 'pushka_base_parser/store',
+    },
     install_requires=[
         'pymongo==3.2.1'
     ],
