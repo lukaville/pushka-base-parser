@@ -15,8 +15,9 @@ class Parser(object):
 
     def handle(self, message, client):
         store = self._store_factory(message['id'])
-        self.parse(message, store, client)
+        result = self.parse(message, store, client)
         store.close()
+        return result
 
     @abc.abstractmethod
     def parse(self, subscription, store, client):
