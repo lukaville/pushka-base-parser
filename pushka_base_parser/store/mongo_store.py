@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-from parser.store.base_store import Store
+from pushka_base_parser.store.base_store import Store
 
 
 class MongoStore(Store):

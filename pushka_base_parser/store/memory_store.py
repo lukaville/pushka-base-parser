@@ -1,7 +1,7 @@
-from parser.store.base_store import Store
+from pushka_base_parser.store.base_store import Store
 
 
-class StateStore(Store):
+class MemoryStore(Store):
     def __init__(self, subscription_id):
         super().__init__(subscription_id)
         self._state = {}
