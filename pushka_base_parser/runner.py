@@ -20,7 +20,8 @@ class Runner(object):
             input_routing_key=self._config['RABBIT_INPUT_ROUTING_KEY'],
             output_exchange=self._config['RABBIT_OUTPUT_EXCHANGE'],
             output_exchange_type=self._config['RABBIT_OUTPUT_EXCHANGE_TYPE'],
-            handler=self._parser.handle
+            output_routing_key=self._config['RABBIT_OUTPUT_ROUTING_KEY'],
+            handler=self._parser.handler
         )
         self._binder.start()
         self._binder.close()
