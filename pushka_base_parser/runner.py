@@ -17,13 +17,13 @@ class Runner(object):
         )
 
         if rpc:
-            self._rabbit_rpc_server = RabbitRpcServer(
+            self._rpc_server = RabbitRpcServer(
                 host=config['RABBIT_HOST'],
                 exchange=config['RABBIT_RPC_EXCHANGE'],
                 routing_key=config['RABBIT_RPC_ROUTING_KEY']
             )
-            self._rabbit_rpc_server.add_callback(self._parser.get_list)
-            self._rabbit_rpc_server.add_callback(self._parser.get_context)
+            self._rpc_server.add_callback(self._parser.get_list)
+            self._rpc_server.add_callback(self._parser.get_context)
 
     def run(self):
         self._binder.bind(
@@ -42,6 +42,6 @@ class Runner(object):
 
         if self._start_rpc:
             print('Starting RPC server...')
-            Process(target=self._rabbit_rpc_server.start).start()
+            Process(target=self._rpc_server.start).start()
 
         self._binder.close()
