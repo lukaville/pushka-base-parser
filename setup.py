@@ -37,5 +37,6 @@ setup(
     ],
     dependency_links=[
         'git+https://github.com/dimorinny/rabbit-bind.git',
+        'git+https://github.com/iskandarov-egor/rabbit-rpc.git'
     ]
 )

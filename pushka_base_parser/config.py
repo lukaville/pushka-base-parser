@@ -11,6 +11,8 @@ def get_config(source_id):
         'RABBIT_INPUT_QUEUE_NAME': source_id,
         'RABBIT_INPUT_EXCHANGE_TYPE': 'direct',
         'RABBIT_INPUT_EXCHANGE': 'source_handlers',
+        'RABBIT_RPC_EXCHANGE': 'rpc',
+        'RABBIT_RPC_ROUTING_KEY': source_id + '_rpc',
         'RABBIT_HOST': 'ampq',
         'MONGO_PORT': 27017,
         'MONGO_HOST': 'db',

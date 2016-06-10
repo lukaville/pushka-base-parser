@@ -33,6 +33,12 @@ class Parser(object):
     def parse(self, subscription, store, client):
         pass
 
+    def get_list(self, list_id, query):
+        pass
+
+    def get_context(self, params):
+        pass
+
     @staticmethod
     def get_param(key, default=None):
         os.getenv(key, default)
