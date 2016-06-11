@@ -36,7 +36,7 @@ setup(
         'pymongo==3.2.1', 'rabbit_bind==1.0.1', 'rabbit_rpc==0.12345'
     ],
     dependency_links=[
-        'git+https://github.com/dimorinny/rabbit-bind.git',
-        'git+https://github.com/iskandarov-egor/rabbit-rpc.git'
+        'git+https://github.com/dimorinny/rabbit-bind.git#egg=rabbit_bind-1.0.1',
+        'git+https://github.com/iskandarov-egor/rabbit-rpc.git#egg=rabbit_rpc-0.12345'
     ]
 )
