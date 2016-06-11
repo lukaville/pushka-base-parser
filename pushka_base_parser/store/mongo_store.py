@@ -7,7 +7,7 @@ class MongoStore(Store):
     def __init__(self, subscription_id, config):
         super().__init__(subscription_id)
 
-        self._client = MongoClient(config['MONGODB_HOST'],
+        self._client = MongoClient(config['MONGO_HOST'],
                                    config['MONGO_PORT'])
 
         self._db = self._client.get_database(config['MONGO_DATABASE'])
