@@ -19,7 +19,7 @@ class Parser(object):
     def handle(self, message, client):
         self._client = client
         store = self._store_factory(message['id'])
-        result = self.parse(message, store, client)
+        result = self.parse(message, store)
         store.close()
         return result
 
@@ -30,7 +30,7 @@ class Parser(object):
         self._client.send(json.dumps(alert))
 
     @abc.abstractmethod
-    def parse(self, subscription, store, client):
+    def parse(self, subscription, store):
         pass
 
     def get_list(self, list_id, query):
