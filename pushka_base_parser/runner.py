@@ -34,7 +34,7 @@ class Runner(object):
             output_exchange=self._config['RABBIT_OUTPUT_EXCHANGE'],
             output_exchange_type=self._config['RABBIT_OUTPUT_EXCHANGE_TYPE'],
             output_routing_key=self._config['RABBIT_OUTPUT_ROUTING_KEY'],
-            handler=self._parser.handler
+            handler=self._parser.handle
         )
 
         print('Starting parser...')
