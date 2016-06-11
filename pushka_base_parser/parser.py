@@ -17,9 +17,10 @@ class Parser(object):
         self._store_factory = store_factory
 
     def handle(self, message, client):
+        subscription = json.loads(message)
         self._client = client
-        store = self._store_factory(message['id'])
-        result = self.parse(message, store)
+        store = self._store_factory(subscription['id'])
+        result = self.parse(subscription, store)
         store.close()
         return result
 
