@@ -26,7 +26,8 @@ setup(
     url='https://github.com/lukaville/pushka-base-parser',
     packages=[
         'pushka_base_parser',
-        'pushka_base_parser.store'
+        'pushka_base_parser.store',
+        'pushka_base_parser.test'
     ],
     package_dir={
         'pushka_base_parser': 'pushka_base_parser',
