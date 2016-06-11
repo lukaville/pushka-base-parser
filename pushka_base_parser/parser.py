@@ -36,7 +36,7 @@ class Parser(object):
     def get_list(self, list_id, query):
         pass
 
-    def get_details(self):
+    def get_details(self, **kwargs):
         pass
 
     @staticmethod
