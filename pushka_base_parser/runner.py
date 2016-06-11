@@ -37,11 +37,10 @@ class Runner(object):
             handler=self._parser.handle
         )
 
-        print('Starting parser...')
-        Process(target=self._binder.start).start()
-
         if self._start_rpc:
             print('Starting RPC server...')
             Process(target=self._rpc_server.start).start()
 
+        print('Starting parser...')
+        self._binder.start()
         self._binder.close()
