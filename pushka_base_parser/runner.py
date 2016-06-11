@@ -23,7 +23,7 @@ class Runner(object):
                 routing_key=config['RABBIT_RPC_ROUTING_KEY']
             )
             self._rpc_server.add_callback(self._parser.get_list)
-            self._rpc_server.add_callback(self._parser.get_context)
+            self._rpc_server.add_callback(self._parser.get_details)
 
     def run(self):
         self._binder.bind(
