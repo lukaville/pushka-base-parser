@@ -33,7 +33,7 @@ setup(
         'pushka_base_parser.store': 'pushka_base_parser/store',
     },
     install_requires=[
-        'pymongo==3.2.1', 'rabbit_bind', 'rabbit_rpc'
+        'pymongo==3.2.1', 'rabbit_bind==1.0.1', 'rabbit_rpc==0.12345'
     ],
     dependency_links=[
         'git+https://github.com/dimorinny/rabbit-bind.git',
