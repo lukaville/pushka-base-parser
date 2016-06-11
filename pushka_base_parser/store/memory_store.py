@@ -2,9 +2,13 @@ from pushka_base_parser.store.base_store import Store
 
 
 class MemoryStore(Store):
-    def __init__(self, subscription_id):
+    def __init__(self, subscription_id, init_state=None):
         super().__init__(subscription_id)
-        self._state = {}
+
+        if init_state is None:
+            init_state = {}
+
+        self._state = init_state
 
     def set_state(self, state):
         self._state = state
